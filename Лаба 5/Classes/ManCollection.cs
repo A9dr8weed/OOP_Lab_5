@@ -22,6 +22,7 @@ namespace Лаба_5.Classes
         public override string ToString()
         {
             string manString = "";
+
             foreach (Man man in ListOfMan)
             {
                 manString += man.ToString();
@@ -33,6 +34,7 @@ namespace Лаба_5.Classes
         public string ToShortString()
         {
             string manString = "";
+
             foreach (Man man in ListOfMan)
             {
                 manString += man.ToShortString();
@@ -45,10 +47,7 @@ namespace Лаба_5.Classes
 
         public void SortByBirthday() => ListOfMan.Sort((x, y) => new Person().Compare(x.PublicPersonal, y.PublicPersonal));
 
-        public void SortByAverageGrade()
-        {
-            ListOfMan.Sort(new ManComparer());
-        }
+        public void SortByAverageGrade() => ListOfMan.Sort(new ManComparer());
 
         public double MaxAverageMark => ListOfMan.Count == 0 ? 0 : ListOfMan.Max(marks => marks.AverageMark);
 

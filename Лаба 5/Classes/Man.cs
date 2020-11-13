@@ -57,10 +57,12 @@ namespace Лаба_5.Classes
             get
             {
                 int sum = 0;
+
                 if (ListOfExam == null)
                 {
                     return 0;
                 }
+
                 foreach (TOEFL exam in ListOfExam)
                 {
                     sum += exam.Grade;
@@ -99,15 +101,18 @@ namespace Лаба_5.Classes
 
         public new object DeepCopy()
         {
-            var stud = new Man(Personal, Qualification, ID);
+            Man stud = new Man(Personal, Qualification, ID);
+
             foreach (TOEFL exam in ListOfExam)
             {
                 stud.AddTOEFL(exam);
             }
+
             foreach (Test test in ListOfTest)
             {
                 stud.AddTest(test);
             }
+
             return stud;
         }
 
