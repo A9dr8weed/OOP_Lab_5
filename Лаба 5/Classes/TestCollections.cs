@@ -17,9 +17,11 @@ namespace Лаба_5.Classes
             return new Man(new Person($"\nPerson {value},", $"Person {value}", DateTime.Now), LevelsOfProficiency.A, value);
         }
 
-        public TestCollections(int Count)
+        public TestCollections(int count)
         {
-            for (int i = 1; i <= Count; i++)
+            Console.WriteLine($"\t\t\tCollection has {count} elements\n");
+            
+            for (int i = 1; i <= count; i++)
             {
                 Man man = GenerateElement(i);
                 PersonList.Add(new Person($"PersonList {i},", $"PersonList {i}", DateTime.Today));
