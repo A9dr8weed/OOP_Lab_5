@@ -115,7 +115,7 @@ namespace Лаба_5
                         }
                     case "6":
                         {
-                            Console.WriteLine($"{MyCollection.AverageMarkGroup(99)}");
+                            Console.WriteLine($"{MyCollection.AverageMarkGroup(9)}");
 
                             Console.ReadLine();
                             Console.Clear();
@@ -135,25 +135,26 @@ namespace Лаба_5
                         }
                     case "8":
                         {
-                            string key2;
+                            string key1;
                             do
                             {
-                                TestCollections p = new TestCollections(20);
+                                TestCollections testCollection = new TestCollections(20);
                                 Console.WriteLine("1 - Search time for an item that is not part of the collection");
                                 Console.WriteLine("2 - Search time for the last item in the collection");
                                 Console.WriteLine("3 - search time of the middle element of the collection");
                                 Console.WriteLine("4 - Search time for the first item in the collection");
-                                Console.WriteLine("5 - Exit");
+                                Console.WriteLine("5 - Show all elements");
+                                Console.WriteLine("6 - Exit");
 
-                                key2 = Console.ReadLine();
+                                key1 = Console.ReadLine();
                                 Console.Clear();
 
-                                switch (key2)
+                                switch (key1)
                                 {
                                     case "1":
                                         {
                                             Console.WriteLine("\t\t\tThe item is not included in the collection.\n");
-                                            p.SearchTheElem(21);
+                                            testCollection.SearchTheElem(21);
 
                                             Console.ReadLine();
                                             Console.Clear();
@@ -162,7 +163,7 @@ namespace Лаба_5
                                     case "2":
                                         {
                                             Console.WriteLine("\t\t\tThe last element of the collection.\n");
-                                            p.SearchTheElem(20);
+                                            testCollection.SearchTheElem(20);
 
                                             Console.ReadLine();
                                             Console.Clear();
@@ -171,7 +172,7 @@ namespace Лаба_5
                                     case "3":
                                         {
                                             Console.WriteLine("\t\t\tThe item is in the middle of the collection.\n");
-                                            p.SearchTheElem(10);
+                                            testCollection.SearchTheElem(10);
 
                                             Console.ReadLine();
                                             Console.Clear();
@@ -180,14 +181,42 @@ namespace Лаба_5
                                     case "4":
                                         {
                                             Console.WriteLine("\t\t\tThe first element of the collection.\n");
-                                            p.SearchTheElem(1);
+                                            testCollection.SearchTheElem(1);
+
+                                            Console.ReadLine();
+                                            Console.Clear();
+                                            break;
+                                        }
+                                    case "5":
+                                        {
+                                            foreach (var item in testCollection)
+                                            {
+                                                Console.WriteLine(item);
+                                            }
+
+                                            Console.ReadLine();
+                                            Console.Clear();
+                                            break;
+                                        }
+                                    default:
+                                        {
+                                            Console.WriteLine("Something went wrong");
 
                                             Console.ReadLine();
                                             Console.Clear();
                                             break;
                                         }
                                 }
-                            } while (key2 != "5");
+                            } while (key1 != "6");
+                            
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Something went wrong");
+
+                            Console.ReadLine();
+                            Console.Clear();
                             break;
                         }
                 }
