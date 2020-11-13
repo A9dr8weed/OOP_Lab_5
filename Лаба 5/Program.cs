@@ -115,7 +115,7 @@ namespace Лаба_5
                         }
                     case "6":
                         {
-                            Console.WriteLine($"{MyCollection.AverageMarkGroup(9)}");
+                            Console.WriteLine($"{MyCollection.AverageMarkGroup(99)}");
 
                             Console.ReadLine();
                             Console.Clear();
@@ -209,14 +209,6 @@ namespace Лаба_5
                                 }
                             } while (key1 != "6");
                             
-                            break;
-                        }
-                    default:
-                        {
-                            Console.WriteLine("Something went wrong");
-
-                            Console.ReadLine();
-                            Console.Clear();
                             break;
                         }
                 }

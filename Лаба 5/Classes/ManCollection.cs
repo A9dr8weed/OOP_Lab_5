@@ -55,6 +55,7 @@ namespace Лаба_5.Classes
 
         public List<Man> AverageMarkGroup(double value)
         {
+            Console.WriteLine($"List of students with a given value: {value}\n");
             foreach (Man mark in ListOfMan.GroupBy(x => x.AverageMark).Where(x => x.Key == value).ToList().SelectMany(marks => marks))
             {
                 Console.WriteLine($"{mark.ToShortString()};\n");
